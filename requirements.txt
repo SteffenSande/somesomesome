@@ -3,7 +3,6 @@ Django==2.1.7
 django-heroku==0.3.1
 get==2018.11.19
 gunicorn==19.9.0
-pkg-resources==0.0.0
 post==2018.11.20
 psycopg2==2.7.7
 public==2018.11.20
