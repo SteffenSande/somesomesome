@@ -1,6 +1,6 @@
 # System for creating a dynamic queue for the popular music streaming service Spotify
 
-## Find website at [https://somesomesome.herokuapp.com/](the webpage)
+## Find website at [by clicking here](https://somesomesome.herokuapp.com/).
 
 
 
