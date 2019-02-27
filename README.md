@@ -2,9 +2,9 @@
 
 ## Setup
 First clone repo
-~~~
+```
 git@github.com:SteffenSande/somesomesome.git
-~~~
+```
 ### Dependencies 
 Install virtualenv however your operation system does intallations.
 For Ubuntu run
