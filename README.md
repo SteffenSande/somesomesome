@@ -35,3 +35,25 @@ Now install all the dependencies listed in the requirements.txt file.
 ~~~
 pip install -r requirements.txt
 ~~~
+
+## Contributing
+If you want some functionality or want to edit existing functionality do the following:
+
+* Create an issue
+* Checkout a branch from that issue
+* Create a pull request
+* Another developer will then review it
+* Feature is added or feature needs more work
+
+## How to run the application locally
+
+The project is devided into fronend and backend.
+
+### Frontend
+In the root directory of the project run 'yarn dev' to compile react. 
+React code is found in the folder 'frontend/src/'
+
+### Backend
+Do setup explained above and then run './manage.py' runserver to start the server. 
+
+It uses the static javascript files which again is transpiled from typescript with 'yarn dev'
