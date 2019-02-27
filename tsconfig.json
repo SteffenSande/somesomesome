@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es6",
+    "pretty": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
