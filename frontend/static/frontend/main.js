@@ -94,7 +94,19 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return App; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBar */ \"./frontend/src/NavBar.tsx\");\n\n\nclass App extends react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"] {\n    constructor(props) {\n        super(props);\n    }\n    render() {\n        return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"App\" },\n            react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_NavBar__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null),\n            react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"h1\", null, \" Hello from react with typescript scss support! \")));\n    }\n}\n\n\n//# sourceURL=webpack:///./frontend/src/App.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return App; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBar */ \"./frontend/src/NavBar.tsx\");\n/* harmony import */ var _Endpoints__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Endpoints */ \"./frontend/src/Endpoints.ts\");\n\n\n\nclass App extends react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"] {\n    constructor(props) {\n        super(props);\n        this.state = {\n            message: null\n        };\n    }\n    componentDidMount() {\n        fetch(_Endpoints__WEBPACK_IMPORTED_MODULE_2__[\"EndPoints\"].TEST)\n            .then((response) => {\n            let message = response.json();\n            console.log(message);\n        })\n            .catch((error) => {\n            console.log(\"No response or something\");\n        });\n    }\n    render() {\n        if (this.state.message) {\n            return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"App\" },\n                react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_NavBar__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null),\n                react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"h1\", null,\n                    \" \",\n                    this.state.message,\n                    \" \")));\n        }\n        else {\n            return (react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", { className: \"App\" },\n                react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](_NavBar__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null),\n                react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"h1\", null, \" Hello from react with typescript scss support! \")));\n        }\n    }\n}\n\n\n//# sourceURL=webpack:///./frontend/src/App.tsx?");
+
+/***/ }),
+
+/***/ "./frontend/src/Endpoints.ts":
+/*!***********************************!*\
+  !*** ./frontend/src/Endpoints.ts ***!
+  \***********************************/
+/*! exports provided: EndPoints */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"EndPoints\", function() { return EndPoints; });\nvar EndPoints;\n(function (EndPoints) {\n    EndPoints[\"TEST\"] = \"http://localhost:8000/json\";\n})(EndPoints || (EndPoints = {}));\n\n\n//# sourceURL=webpack:///./frontend/src/Endpoints.ts?");
 
 /***/ }),
 

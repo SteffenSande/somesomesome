@@ -31,7 +31,7 @@ export default class NavBar extends React.Component<INavBarProps,
                     </div>
                 </nav>
             </div>
-    );
-    }    
+        );
+    }
 }
 
