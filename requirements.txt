@@ -1,8 +1,10 @@
 dj-database-url==0.5.0
 Django==2.1.7
+django-cors-headers==2.5.2
 django-heroku==0.3.1
 django-rest-framework==0.1.0
 djangorestframework==3.9.1
+djangorestframework-stubs==0.4.2
 get==2018.11.19
 gunicorn==19.9.0
 post==2018.11.20
