@@ -19,10 +19,8 @@ export default class App extends React.Component<IAppProps, IAppState> {
 
     componentDidMount() {
         fetch(EndPoints.TEST)
-            .then((response) => {
-                let message = response.json();
-                console.log(message)
-            })
+            .then(response => response.json())
+            .then(data => this.setState({ message: data[0].search }))
             .catch((error) => {
                 console.log("No response or something")
             })
