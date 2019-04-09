@@ -1,6 +1,7 @@
 import * as React from "react";
 import NavBar from "./NavBar";
 import {EndPoints} from './Endpoints';
+import SearchBar from "./SearchBar";
 
 export interface IAppProps {
 }
@@ -30,6 +31,7 @@ export default class App extends React.Component<IAppProps, IAppState> {
         if (this.state.message) {
             return (<div className="App">
                 <NavBar />
+                <SearchBar />
                 <h1> {this.state.message} </h1>
             </div>);
         } else {
