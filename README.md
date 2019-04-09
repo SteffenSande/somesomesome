@@ -50,10 +50,10 @@ If you want some functionality or want to edit existing functionality do the fol
 The project is devided into fronend and backend.
 
 ### Frontend
-In the root directory of the project run `yarn dev` to compile react. 
+In the root directory of the project run `yarn dev` or `npm run dev` to compile react. 
 React code is found in the folder `frontend/src/`
 
 ### Backend
-Do setup explained above and then run `./manage.py` runserver to start the server. 
+Do setup explained above and then run `./manage.py runserver` to start the server. 
 
 It uses the static javascript files which again is transpiled from typescript with `yarn dev`
