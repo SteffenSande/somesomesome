@@ -18,19 +18,23 @@ export default class SearchBar extends React.Component<ISearchBarProps,
 
         this.state = {
             searchText: ""
-        }
+        };
     }
-
     render() {
         return (
-            <div>
-                <form className="searchbar" onSubmit={this.handleSubmit} >
-                    <input  className="form-control" 
-                            type="text" 
-                            value={this.state.searchText} 
-                            onChange={this.updateSearch}
-                            placeholder="Search" />
-                </form>
+            <div className="container">
+                <div className="jumbotron">
+                    <div className="jumbotron" style={{backgroundColor: "#1DB954"}}>
+                        <h1 style={{color: " #191414", textAlign: "center"}}>Search for a song on Spotify!</h1>
+                    </div>
+                    <form className="searchbar" onSubmit={this.handleSubmit} >
+                        <input  className="form-control"
+                                type="text"
+                                value={this.state.searchText}
+                                onChange={this.updateSearch}
+                                placeholder="Search" />
+                    </form>
+                </div>
             </div>
         );
     }
@@ -40,14 +44,14 @@ export default class SearchBar extends React.Component<ISearchBarProps,
 
     handleSubmit(event: any) {
 
-        console.log("Searched for:" + this.state.searchText)
+        console.log("Searched for:" + this.state.searchText);
 
         fetch(EndPoints.SPOTIFY_TEST)
             .then(response => response.json())
             .then(data => console.log(data))
             .catch((error) => {
                 console.log("No response or something")
-        })
+        });
 
         event.preventDefault();
     }
