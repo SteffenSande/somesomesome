@@ -21,10 +21,16 @@ export default class App extends React.Component<IAppProps, IAppState> {
 
     componentDidMount() {
         getFromServer(EndPoints.JSON)
-            .then(response => response.json())
-            .then(data => this.setState({ message: data[0].search }))
+            .then(response => {
+                response.text().then(
+                    response =>{
+                        console.log(response);
+                        this.setState({...this.state, message: response});
+                    }
+                )
+            })
             .catch((error) => {
-                console.log("No response or something")
+                console.log(error)
             })
     }
 

@@ -45,14 +45,6 @@ export default class SearchBar extends React.Component<ISearchBarProps,
     handleSubmit(event: any) {
 
         console.log("Searched for:" + this.state.searchText);
-
-        fetch(EndPoints.SPOTIFY_TEST)
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch((error) => {
-                console.log("No response or something")
-        });
-
         event.preventDefault();
     }
 }

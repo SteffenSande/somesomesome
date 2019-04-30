@@ -1,5 +1,5 @@
 export enum EndPoints {
-    JSON="JSON"
+    JSON="json"
 }
 
 
