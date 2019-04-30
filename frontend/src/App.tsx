@@ -2,6 +2,7 @@ import * as React from "react";
 import NavBar from "./NavBar";
 import {EndPoints} from './Endpoints';
 import SearchBar from "./SearchBar";
+import {getFromServer} from "./util";
 
 export interface IAppProps {
 }
@@ -19,7 +20,7 @@ export default class App extends React.Component<IAppProps, IAppState> {
     }
 
     componentDidMount() {
-        fetch(EndPoints.TEST)
+        getFromServer(EndPoints.JSON)
             .then(response => response.json())
             .then(data => this.setState({ message: data[0].search }))
             .catch((error) => {

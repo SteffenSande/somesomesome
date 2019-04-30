@@ -1,4 +1,9 @@
 export enum EndPoints {
-   TEST='http://localhost:8000/json',
-   SPOTIFY_TEST='https://api.spotify.com/v1/artists/1vCWHaC5f2uS3yhpwWbIA6/albums?album_type=SINGLE&offset=20&limit=10'
+    JSON="JSON"
+}
+
+
+export enum Api {
+    DEV="http://localhost:8000/",
+    PROD="https://somesomesome.herokuapp.com/"
 }
