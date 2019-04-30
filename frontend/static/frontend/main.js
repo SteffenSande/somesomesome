@@ -154,7 +154,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getFromServer\", function() { return getFromServer; });\n/* harmony import */ var _Endpoints__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Endpoints */ \"./frontend/src/Endpoints.ts\");\n\nconst api = _Endpoints__WEBPACK_IMPORTED_MODULE_0__[\"Api\"].DEV;\nfunction getFromServer(endpoint) {\n    let response = fetch(api + endpoint);\n    return response;\n}\n\n\n//# sourceURL=webpack:///./frontend/src/util.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getFromServer\", function() { return getFromServer; });\n/* harmony import */ var _Endpoints__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Endpoints */ \"./frontend/src/Endpoints.ts\");\n\nconst api = _Endpoints__WEBPACK_IMPORTED_MODULE_0__[\"Api\"].PROD;\nfunction getFromServer(endpoint) {\n    let response = fetch(api + endpoint);\n    return response;\n}\n\n\n//# sourceURL=webpack:///./frontend/src/util.ts?");
 
 /***/ }),
 
