@@ -102,11 +102,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!***********************************!*\
   !*** ./frontend/src/Endpoints.ts ***!
   \***********************************/
-/*! exports provided: EndPoints, Api, steffenClientId, spotifyApi */
+/*! exports provided: EndPoints, Api, spotifyApi */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"EndPoints\", function() { return EndPoints; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Api\", function() { return Api; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"steffenClientId\", function() { return steffenClientId; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"spotifyApi\", function() { return spotifyApi; });\nvar EndPoints;\n(function (EndPoints) {\n    EndPoints[\"JSON\"] = \"json\";\n})(EndPoints || (EndPoints = {}));\nvar Api;\n(function (Api) {\n    Api[\"DEV\"] = \"http://localhost:8000/\";\n    Api[\"PROD\"] = \"https://somesomesome.herokuapp.com/\";\n})(Api || (Api = {}));\nvar steffenClientId;\n(function (steffenClientId) {\n    steffenClientId[\"CLIENT_ID\"] = \"117c28312a9a4de2805062ac8a5fcf3f\";\n})(steffenClientId || (steffenClientId = {}));\nvar spotifyApi;\n(function (spotifyApi) {\n    spotifyApi[\"BASE\"] = \"https://api.spotify.com/\";\n})(spotifyApi || (spotifyApi = {}));\n\n\n//# sourceURL=webpack:///./frontend/src/Endpoints.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"EndPoints\", function() { return EndPoints; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Api\", function() { return Api; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"spotifyApi\", function() { return spotifyApi; });\nvar EndPoints;\n(function (EndPoints) {\n    EndPoints[\"JSON\"] = \"json\";\n})(EndPoints || (EndPoints = {}));\nvar Api;\n(function (Api) {\n    Api[\"DEV\"] = \"http://localhost:8000/\";\n    Api[\"PROD\"] = \"https://somesomesome.herokuapp.com/\";\n})(Api || (Api = {}));\nvar spotifyApi;\n(function (spotifyApi) {\n    spotifyApi[\"BASE\"] = \"https://api.spotify.com/\";\n})(spotifyApi || (spotifyApi = {}));\n\n\n//# sourceURL=webpack:///./frontend/src/Endpoints.ts?");
 
 /***/ }),
 
@@ -154,7 +154,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getFromServer\", function() { return getFromServer; });\n/* harmony import */ var _Endpoints__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Endpoints */ \"./frontend/src/Endpoints.ts\");\n\nconst api = _Endpoints__WEBPACK_IMPORTED_MODULE_0__[\"Api\"].DEV;\nfunction getFromServer(endpoint) {\n    let response = fetch(api + endpoint);\n    return response;\n}\n\n\n//# sourceURL=webpack:///./frontend/src/util.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getFromServer\", function() { return getFromServer; });\n/* harmony import */ var _Endpoints__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Endpoints */ \"./frontend/src/Endpoints.ts\");\n\nconst api = _Endpoints__WEBPACK_IMPORTED_MODULE_0__[\"Api\"].PROD;\nfunction getFromServer(endpoint) {\n    let response = fetch(api + endpoint);\n    return response;\n}\n\n\n//# sourceURL=webpack:///./frontend/src/util.ts?");
 
 /***/ }),
 
