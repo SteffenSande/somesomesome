@@ -129,5 +129,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+SPOTIPY_CLIENT_ID='117c28312a9a4de2805062ac8a5fcf3f'
+SPOTIPY_CLIENT_SECRET='066c1a4825f04b4196e5bcd62be72f1c'
+SPOTIPY_REDIRECT_URI='https://somesomesome.herokuapp.com/'
+
 #Activate django settigns 
 django_heroku.settings(locals())
