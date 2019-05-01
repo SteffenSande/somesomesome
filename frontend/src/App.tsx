@@ -22,10 +22,10 @@ export default class App extends React.Component<IAppProps, IAppState> {
     componentDidMount() {
         getFromServer(EndPoints.JSON)
             .then(response => {
-                response.text().then(
+                response.json().then(
                     response =>{
-                        console.log(response);
-                        this.setState({...this.state, message: response});
+                        console.log(response['category'][0]['name']);
+                        this.setState({...this.state, message: response['category'][0]['name']});
                     }
                 )
             })
