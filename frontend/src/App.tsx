@@ -25,7 +25,7 @@ export default class App extends React.Component<IAppProps, IAppState> {
                 response.json().then(
                     response =>{
                         console.log(response['category'][0]['name']);
-                        this.setState({...this.state, message: response['category'][0]['name']});
+                        this.setState({...this.state, message: response['category'][1]['name']});
                     }
                 )
             })
@@ -35,17 +35,10 @@ export default class App extends React.Component<IAppProps, IAppState> {
     }
 
     render() {
-        if (this.state.message) {
             return (<div className="App">
                 <NavBar />
                 <SearchBar />
                 <h1> {this.state.message} </h1>
             </div>);
-        } else {
-            return (<div className="App">
-                <NavBar/>
-                <h1> Hello from react with typescript scss support! </h1>
-            </div>);
-        }
     }
 }
