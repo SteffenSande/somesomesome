@@ -20,25 +20,27 @@ export default class App extends React.Component<IAppProps, IAppState> {
     }
 
     componentDidMount() {
-        getFromServer(EndPoints.JSON)
-            .then(response => {
-                response.json().then(
-                    response =>{
-                        console.log(response['category'][0]['name']);
-                        this.setState({...this.state, message: response['category'][1]['name']});
-                    }
-                )
-            })
-            .catch((error) => {
-                console.log(error)
-            })
+
     }
 
     render() {
             return (<div className="App">
                 <NavBar />
                 <SearchBar handleSubmit={(searchText:string) => {
-                    console.log("Hei, its me Mario" + searchText);}} />
+                    console.log("Hei, its me Mario" + searchText);
+                    getFromServer(EndPoints.SEARCH+searchText)
+                    .then(response => {
+                    response.json().then(
+                    response =>{
+                    console.log(response);
+                }
+                    )
+                })
+                    .catch((error) => {
+                    console.log(error)
+                })
+                } }
+                />
                 <h1> {this.state.message} </h1>
             </div>);
     }

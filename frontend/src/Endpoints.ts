@@ -1,5 +1,6 @@
 export enum EndPoints {
-    JSON="json"
+    JSON="json",
+    SEARCH="search/"
 }
 
 
