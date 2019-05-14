@@ -1,8 +1,35 @@
 import requests
+from enum import Enum
+import urllib.parse
 
-
-class AccessToken:
+class API:
     access_token = ''
+
+    class Options(Enum):
+        ARTIST="artist"
+        ALBUM="album"
+        SONG="track"
+        PLAYLIST="playlist"
+
+    @classmethod
+    def call(self, search_string, options):
+        base_url = "https://api.spotify.com/v1/search?"
+
+        self.access_token = self.get_access_token()
+
+        search_string = urllib.parse.quote(search_string)
+
+        url = base_url + "q=" + search_string.lower() + "&type=" + options.value
+
+        header = {
+            'Authorization': 'Bearer ' + self.access_token
+        }
+
+        response = requests.get(url, headers=header)
+
+        print(response)
+
+        return response
 
     @classmethod
     def get_access_token(cls):
@@ -25,5 +52,6 @@ class AccessToken:
 
             content = autorize.json()
             cls.access_token = content['access_token']
+            print(cls.access_token)
 
         return cls.access_token
