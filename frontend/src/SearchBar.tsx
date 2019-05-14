@@ -2,6 +2,7 @@ import * as React from 'react';
 import { EndPoints } from './Endpoints';
 
 export interface ISearchBarProps {
+    handleSubmit: (any);
 }
 
 export interface ISearchBarState {
@@ -14,7 +15,7 @@ export default class SearchBar extends React.Component<ISearchBarProps,
         super(props);
 
         this.updateSearch = this.updateSearch.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+       // this.handleSubmit = this.handleSubmit.bind(this);
 
         this.state = {
             searchText: ""
@@ -27,13 +28,14 @@ export default class SearchBar extends React.Component<ISearchBarProps,
                     <div className="jumbotron" style={{backgroundColor: "#1DB954"}}>
                         <h1 style={{color: " #191414", textAlign: "center"}}>Search for a song on Spotify!</h1>
                     </div>
-                    <form className="searchbar" onSubmit={this.handleSubmit} >
-                        <input  className="form-control"
-                                type="text"
-                                value={this.state.searchText}
-                                onChange={this.updateSearch}
-                                placeholder="Search" />
-                    </form>
+                    <input  className="form-control"
+                            type="text"
+                            value={this.state.searchText}
+                            onChange={this.updateSearch}
+                            placeholder="Search" />
+                    <button className="btn btn-primary"
+                            onClick={() => this.props.handleSubmit(this.state.searchText)}
+                            type={"submit"}>Search</button>
                 </div>
             </div>
         );
@@ -42,10 +44,9 @@ export default class SearchBar extends React.Component<ISearchBarProps,
         this.setState({searchText: event.target.value})
     }
 
-    handleSubmit(event: any) {
-
-        console.log("Searched for:" + this.state.searchText);
-        event.preventDefault();
-    }
+    // handleSubmit(event: any) {
+    //     console.log("Searched for:" + this.state.searchText);
+    //     event.preventDefault();
+    // }
 }
 

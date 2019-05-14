@@ -37,7 +37,8 @@ export default class App extends React.Component<IAppProps, IAppState> {
     render() {
             return (<div className="App">
                 <NavBar />
-                <SearchBar />
+                <SearchBar handleSubmit={(searchText:string) => {
+                    console.log("Hei, its me Mario" + searchText);}} />
                 <h1> {this.state.message} </h1>
             </div>);
     }
