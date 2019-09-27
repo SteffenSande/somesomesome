@@ -1,8 +1,13 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const path = require('path');
 module.exports = {
   entry: {
-      index: 'frontend/src/index.tsx', 
+      index: './frontend/src/index.tsx', 
+      listen: './frontend/src/listen/index.tsx'
+  },
+  output: {
+      path: path.resolve(__dirname, 'frontend/static/frontend'),
+      filename:'[name].js'   
   },
   resolve: {
       extensions: [".ts", ".tsx", ".js", ".jsx"]

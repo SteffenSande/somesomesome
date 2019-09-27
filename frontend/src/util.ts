@@ -8,3 +8,7 @@ export function getFromServer(endpoint:string) : Promise<any> {
     console.log(response);
     return response
 }
+
+export function redirectToCorrect(to:string) :string{
+    return api + to;
+}

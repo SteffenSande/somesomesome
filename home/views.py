@@ -8,6 +8,8 @@ from django.http import HttpResponse
 def index(request):
     return render(request, 'frontend/index.html')
 
+def listen(request):
+    return render(request, 'frontend/ListenIn.html')
 
 @csrf_exempt
 def json(request):
